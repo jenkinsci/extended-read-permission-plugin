@@ -16,7 +16,7 @@
 
   <groupId>org.jvnet.hudson.plugins</groupId>
   <artifactId>extended-read-permission</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <packaging>hpi</packaging>
   <name>Hudson Extended Read Permission Plugin</name>
   <url>http://wiki.hudson-ci.org/display/HUDSON/Extended+Read+Permission+Plugin</url>
@@ -51,4 +51,10 @@
       <url>http://maven.glassfish.org/content/groups/public/</url>
     </pluginRepository>
   </pluginRepositories>
+
+  <scm>
+    <connection>scm:svn:https://guest@svn.dev.java.net/svn/hudson/tags/extended-read-permission-1.0</connection>
+    <developerConnection>scm:svn:https://svn.dev.java.net/svn/hudson/tags/extended-read-permission-1.0</developerConnection>
+    <url>https://hudson.dev.java.net/source/browse/hudson/hudson/plugins/extended-read-permission/tags/extended-read-permission-1.0</url>
+  </scm>
 </project>
