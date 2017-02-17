@@ -9,7 +9,6 @@ package hudson.plugins.extendedread;
 
 import hudson.Plugin;
 import hudson.model.Item;
-import java.lang.reflect.Field;
 
 /**
  *
@@ -28,7 +27,7 @@ public class PluginImpl extends Plugin {
         try {
             Class clazz = Item.class;
             if (clazz!=null) {
-                Field f = clazz.getDeclaredField("EXTENDED_READ");
+                clazz.getDeclaredField("EXTENDED_READ");
             }
             Item.EXTENDED_READ.setEnabled(true);
         }
