@@ -15,7 +15,7 @@
 
   <groupId>org.jvnet.hudson.plugins</groupId>
   <artifactId>extended-read-permission</artifactId>
-  <version>1.1-SNAPSHOT</version>
+  <version>2.0-beta-1</version>
   <packaging>hpi</packaging>
   <name>Jenkins Extended Read Permission Plugin</name>
   <url>https://wiki.jenkins-ci.org/display/JENKINS/Extended+Read+Permission+Plugin</url>
@@ -36,6 +36,7 @@
     <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
     <url>http://github.com/jenkinsci/${project.artifactId}-plugin</url>
+    <tag>extended-read-permission-2.0-beta-1</tag>
   </scm>
 
   <!-- get every artifact through maven.glassfish.org, which proxies all the artifacts that we need -->
