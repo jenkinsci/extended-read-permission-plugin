@@ -8,7 +8,7 @@ import hudson.model.Item;
 @Extension
 public class ExtendedReadPermissionEnabler {
     @Initializer(after = InitMilestone.STARTED)
-    public static void EnableExtendedReadPermission() {
+    public static void enableExtendedReadPermission() {
         if (System.getProperty("hudson.security.ExtendedReadPermission") == null) {
             Item.EXTENDED_READ.setEnabled(true);
         }
