@@ -10,7 +10,7 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>2.20</version><!-- which version of Hudson is this plugin built against? -->
+    <version>3.48</version>
   </parent>
 
   <groupId>org.jvnet.hudson.plugins</groupId>
@@ -21,21 +21,25 @@
   <url>https://github.com/jenkinsci/extended-read-permission-plugin</url>
 
   <properties>
-    <jenkins.version>1.609.1</jenkins.version>
-    <hpi-plugin.version>1.106</hpi-plugin.version>
+    <jenkins.version>2.138.3</jenkins.version>
+    <java.level>8</java.level>
   </properties>
 
   <developers>
     <developer>
       <id>dty</id>
       <name>Dean Yu</name>
+      <roles>
+        <role>creator (retired)</role>
+      </roles>
     </developer>
+   <!-- TODO: add other maintainers -->
   </developers>
 
   <scm>
     <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
-    <url>http://github.com/jenkinsci/${project.artifactId}-plugin</url>
+    <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
     <tag>HEAD</tag>
   </scm>
 
@@ -43,14 +47,14 @@
   <repositories>
     <repository>
       <id>repo.jenkins-ci.org</id>
-      <url>http://repo.jenkins-ci.org/public/</url>
+      <url>https://repo.jenkins-ci.org/public/</url>
     </repository>
   </repositories>
 
   <pluginRepositories>
     <pluginRepository>
       <id>repo.jenkins-ci.org</id>
-      <url>http://repo.jenkins-ci.org/public/</url>
+      <url>https://repo.jenkins-ci.org/public/</url>
     </pluginRepository>
   </pluginRepositories>
 </project>
