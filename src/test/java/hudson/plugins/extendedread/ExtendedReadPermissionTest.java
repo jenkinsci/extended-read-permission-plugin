@@ -7,15 +7,24 @@
 
 package hudson.plugins.extendedread;
 
-import hudson.model.Item;
+import static org.junit.Assert.assertTrue;
 
-import org.jvnet.hudson.test.HudsonTestCase;
+import org.junit.Rule;
+import org.junit.Test;
+import org.jvnet.hudson.test.JenkinsRule;
+
+import hudson.model.Item;
 
 /**
  *
  * @author dty
  */
-public class ExtendedReadPermissionTest extends HudsonTestCase {
+public class ExtendedReadPermissionTest {
+
+    @Rule
+    public JenkinsRule j =  new JenkinsRule();
+
+    @Test
     public void testExtendedReadPermissionEnabled() throws Exception {
         assertTrue(Item.EXTENDED_READ.getEnabled());
     }
