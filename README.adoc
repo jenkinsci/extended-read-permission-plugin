@@ -18,4 +18,4 @@ The pages that currently support this permission are:
 
 ## Changelog
 
-See [GitHub Releases](https://github.com/jenkinsci/extended-read-permission-plugin/releases)
+See link:https://github.com/jenkinsci/extended-read-permission-plugin/releases[GitHub Releases]
