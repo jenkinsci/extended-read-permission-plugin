@@ -18,7 +18,7 @@
   <version>2.1-SNAPSHOT</version>
   <packaging>hpi</packaging>
   <name>Jenkins Extended Read Permission Plugin</name>
-  <url>https://plugins.jenkins.io/extended-read-permission</url>
+  <url>https://github.com/jenkinsci/extended-read-permission-plugin</url>
 
   <properties>
     <jenkins.version>2.138.3</jenkins.version>

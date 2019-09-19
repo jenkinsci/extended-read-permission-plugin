@@ -1,3 +1,21 @@
-= Extended Read Permission Plugin
+Extended Read Permission Plugin
+===============================
 
-See link:https://wiki.jenkins-ci.org/display/JENKINS/Extended+Read+Permission+Plugin[Wiki Page].
+image:https://img.shields.io/jenkins/plugin/v/extended-read-permission.svg[link="https://plugins.jenkins.io/extended-read-permission"]
+image:https://img.shields.io/github/release/jenkinsci/extended-read-permission-plugin.svg?label=release[link="https://github.com/jenkinsci/extended-read-permission-plugin/releases/latest"]
+image:https://img.shields.io/jenkins/plugin/i/extended-read-permission.svg?color=blue[link="https://plugins.jenkins.io/extended-read-permission"]
+
+This plugin enables the Extended Read permission in Jenkins 1.324 and newer.
+
+When this plugin is installed and active, a new column will be added to your authorization strategy configuration (for example, Matrix Security or Project-Based Matrix Security) in the _Configure Security_ screen.
+This permission grants users and groups read access to pages that would otherwise require configuration or administrative permissions.
+
+## Supported pages
+
+The pages that currently support this permission are:
+
+* Job configurations
+
+## Changelog
+
+See [GitHub Releases](https://github.com/jenkinsci/extended-read-permission-plugin/releases)
