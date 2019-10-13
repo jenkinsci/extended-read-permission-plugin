@@ -18,7 +18,7 @@ public class SystemReadPermission {
     static {
         Permission systemRead;
         try {
-            systemRead = (Permission) ReflectionUtils.getPublicProperty(Jenkins.getInstance(), "SYSTEM_READ");
+            systemRead = (Permission) ReflectionUtils.getPublicProperty(Jenkins.get(), "SYSTEM_READ");
         } catch (IllegalArgumentException | InvocationTargetException | NoSuchMethodException | IllegalAccessException e) {
             LOGGER.log(Level.FINE, "Couldn't find system read permission, falling back to ADMINISTER", e);
             systemRead = ADMINISTER;
