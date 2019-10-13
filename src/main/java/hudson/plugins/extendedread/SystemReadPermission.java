@@ -13,14 +13,17 @@ public class SystemReadPermission {
 
     private static final Logger LOGGER = Logger.getLogger(SystemReadPermission.class.getName());
 
-    public static Permission SYSTEM_READ;
+    public static final Permission SYSTEM_READ;
 
     static {
+        Permission systemRead;
         try {
-            SYSTEM_READ = (Permission) ReflectionUtils.getPublicProperty(Jenkins.getInstance(), "SYSTEM_READ");
+            systemRead = (Permission) ReflectionUtils.getPublicProperty(Jenkins.getInstance(), "SYSTEM_READ");
         } catch (IllegalArgumentException | InvocationTargetException | NoSuchMethodException | IllegalAccessException e) {
             LOGGER.log(Level.FINE, "Couldn't find system read permission, falling back to ADMINISTER", e);
-            SYSTEM_READ = ADMINISTER;
+            systemRead = ADMINISTER;
         }
+
+        SYSTEM_READ = systemRead;
     }
 }
