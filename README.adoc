@@ -5,16 +5,29 @@ image:https://img.shields.io/jenkins/plugin/v/extended-read-permission.svg[link=
 image:https://img.shields.io/github/release/jenkinsci/extended-read-permission-plugin.svg?label=release[link="https://github.com/jenkinsci/extended-read-permission-plugin/releases/latest"]
 image:https://img.shields.io/jenkins/plugin/i/extended-read-permission.svg?color=blue[link="https://plugins.jenkins.io/extended-read-permission"]
 
-This plugin enables the Extended Read permission in Jenkins 1.324 and newer.
+This plugin enables various Extended Read permissions in Jenkins.
 
-When this plugin is installed and active, a new column will be added to your authorization strategy configuration (for example, Matrix Security or Project-Based Matrix Security) in the _Configure Security_ screen.
+## Usage
+
+When this plugin is installed and proper system properties are set (see below),
+a new column will be added to your authorization strategy configuration (for example, Matrix Security or Project-Based Matrix Security) in the _Configure Security_ screen.
 This permission grants users and groups read access to pages that would otherwise require configuration or administrative permissions.
 
-## Supported pages
+## Supported permissions
 
 The pages that currently support this permission are:
 
-* Job configurations
+* Read-only access to Job configurations (`Job/ExtendedRead`)
+** Available since Jenkins 1.324
+** Controlled by a `hudson.security.ExtendedReadPermission` system property. The permission will be enabled if a property is set
+* Read-only access to the System configuration and management pages (`Overall/SystemRead`)
+** Available since Jenkins 2.222, see link:https://github.com/jenkinsci/jep/tree/master/jep/224[JEP-224] for details
+** Controlled by a `jenkins.security.SystemReadPermission` system property
+
+## API
+
+The plugin exposes some additional APIs which simplify usage of the extended read permissions in other plugins.
+See link:https://javadoc.jenkins.io/plugin/extended-read-permission/[the plugin's Javadoc] for more information.
 
 ## Changelog
 
