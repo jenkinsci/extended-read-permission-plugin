@@ -1,0 +1,4 @@
+<?jelly escape-by-default='true'?>
+<div>
+  This plugin enables various Extended Read permissions in Jenkins for jobs, system configuration, etc.
+</div>
