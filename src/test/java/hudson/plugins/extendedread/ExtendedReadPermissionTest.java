@@ -9,6 +9,7 @@ package hudson.plugins.extendedread;
 
 import static org.junit.Assert.assertTrue;
 
+import hudson.model.Computer;
 import org.junit.Rule;
 import org.junit.Test;
 import org.jvnet.hudson.test.JenkinsRule;
@@ -25,7 +26,12 @@ public class ExtendedReadPermissionTest {
     public JenkinsRule j =  new JenkinsRule();
 
     @Test
-    public void testExtendedReadPermissionEnabled() throws Exception {
+    public void testItemExtendedReadPermissionEnabled() throws Exception {
         assertTrue(Item.EXTENDED_READ.getEnabled());
+    }
+
+    @Test
+    public void testComputerExtendedReadPermissionEnabled() throws Exception {
+        assertTrue(Computer.EXTENDED_READ.getEnabled());
     }
 }
