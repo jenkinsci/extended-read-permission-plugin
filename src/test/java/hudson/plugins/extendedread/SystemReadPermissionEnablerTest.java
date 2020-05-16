@@ -20,7 +20,7 @@ public class SystemReadPermissionEnablerTest {
     @Test
     public void testSystemReadPermissionEnabled() {
         VersionNumber version = requireNonNull(Jenkins.getVersion());
-        assumeThat("Core version is newer than 2.221", version, greaterThan(new VersionNumber("2.221")));
+        assumeThat("This test requires Jenkins core version 2.221 or newer", version, greaterThan(new VersionNumber("2.221")));
         
         Permission systemRead = SystemReadPermission.SYSTEM_READ;
         
