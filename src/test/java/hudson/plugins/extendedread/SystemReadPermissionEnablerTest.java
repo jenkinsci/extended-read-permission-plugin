@@ -8,9 +8,9 @@ import org.junit.Test;
 import org.jvnet.hudson.test.JenkinsRule;
 
 import static java.util.Objects.requireNonNull;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
 import static org.junit.Assume.assumeThat;
 
 public class SystemReadPermissionEnablerTest {
