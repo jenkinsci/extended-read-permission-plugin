@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
  * Copyright (c) 2009 Yahoo! Inc.
  * All rights reserved.
@@ -5,8 +6,9 @@
  * (http://www.opensource.org/licenses/mit-license.php)
  -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
@@ -16,31 +18,23 @@
 
   <groupId>org.jvnet.hudson.plugins</groupId>
   <artifactId>extended-read-permission</artifactId>
-  <version>3.3-SNAPSHOT</version>
+  <version>${changelist}</version>
   <packaging>hpi</packaging>
+
   <name>Jenkins Extended Read Permission Plugin</name>
   <url>https://github.com/jenkinsci/extended-read-permission-plugin</url>
-
-  <properties>
-    <jenkins.version>2.387.3</jenkins.version>
-  </properties>
-
-  <developers>
-    <developer>
-      <id>dty</id>
-      <name>Dean Yu</name>
-      <roles>
-        <role>creator (retired)</role>
-      </roles>
-    </developer>
-  </developers>
 
   <scm>
     <connection>scm:git:https://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
     <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
-    <tag>HEAD</tag>
+    <tag>${scmTag}</tag>
   </scm>
+
+  <properties>
+    <jenkins.version>2.387.3</jenkins.version>
+    <changelist>999999-SNAPSHOT</changelist>
+  </properties>
 
   <!-- get every artifact through maven.glassfish.org, which proxies all the artifacts that we need -->
   <repositories>
@@ -49,7 +43,6 @@
       <url>https://repo.jenkins-ci.org/public/</url>
     </repository>
   </repositories>
-
   <pluginRepositories>
     <pluginRepository>
       <id>repo.jenkins-ci.org</id>
