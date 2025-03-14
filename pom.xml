@@ -12,8 +12,8 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>4.88</version>
-    <relativePath/>
+    <version>5.9</version>
+    <relativePath />
   </parent>
 
   <groupId>org.jvnet.hudson.plugins</groupId>
@@ -32,7 +32,7 @@
   </scm>
 
   <properties>
-    <jenkins.version>2.452.4</jenkins.version>
+    <jenkins.version>2.479.3</jenkins.version>
     <changelist>999999-SNAPSHOT</changelist>
   </properties>
 
