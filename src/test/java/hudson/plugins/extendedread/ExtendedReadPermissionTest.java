@@ -7,31 +7,29 @@
 
 package hudson.plugins.extendedread;
 
-import static org.junit.Assert.assertTrue;
-
 import hudson.model.Computer;
-import org.junit.Rule;
-import org.junit.Test;
-import org.jvnet.hudson.test.JenkinsRule;
-
 import hudson.model.Item;
+import org.junit.jupiter.api.Test;
+import org.jvnet.hudson.test.JenkinsRule;
+import org.jvnet.hudson.test.junit.jupiter.WithJenkins;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  *
  * @author dty
  */
-public class ExtendedReadPermissionTest {
+@WithJenkins
+class ExtendedReadPermissionTest {
 
-    @Rule
-    public JenkinsRule j =  new JenkinsRule();
 
     @Test
-    public void testItemExtendedReadPermissionEnabled() throws Exception {
+    void testItemExtendedReadPermissionEnabled(JenkinsRule j) {
         assertTrue(Item.EXTENDED_READ.getEnabled());
     }
 
     @Test
-    public void testComputerExtendedReadPermissionEnabled() throws Exception {
+    void testComputerExtendedReadPermissionEnabled(JenkinsRule j) {
         assertTrue(Computer.EXTENDED_READ.getEnabled());
     }
 }
