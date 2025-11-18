@@ -34,6 +34,7 @@
   <properties>
     <jenkins.version>2.479.3</jenkins.version>
     <changelist>999999-SNAPSHOT</changelist>
+    <ban-junit4-imports.skip>false</ban-junit4-imports.skip>
   </properties>
 
   <!-- get every artifact through maven.glassfish.org, which proxies all the artifacts that we need -->
