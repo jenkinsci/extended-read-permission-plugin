@@ -1,7 +1,6 @@
 package hudson.plugins.extendedread;
 
 import hudson.security.Permission;
-import hudson.util.VersionNumber;
 import jenkins.model.Jenkins;
 import org.junit.jupiter.api.Test;
 import org.jvnet.hudson.test.JenkinsRule;
@@ -17,10 +16,7 @@ class SystemReadPermissionEnablerTest {
 
     @Test
     void testSystemReadPermissionEnabled(JenkinsRule j) {
-        VersionNumber version = requireNonNull(Jenkins.getVersion());
-        assumeTrue(version.isNewerThan(new VersionNumber("2.221")), "This test requires Jenkins core version 2.221 or newer");
-
-        Permission systemRead = SystemReadPermission.SYSTEM_READ;
+        Permission systemRead = Jenkins.SYSTEM_READ;
 
         // let's be safe and validate we aren't using the administer fallback
         assertThat(systemRead.name, is("SystemRead"));
