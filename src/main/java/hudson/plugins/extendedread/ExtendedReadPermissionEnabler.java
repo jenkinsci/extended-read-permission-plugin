@@ -1,6 +1,7 @@
 package hudson.plugins.extendedread;
 
 import hudson.model.Computer;
+import hudson.model.View;
 import org.kohsuke.accmod.Restricted;
 import org.kohsuke.accmod.restrictions.NoExternalUse;
 
@@ -17,6 +18,7 @@ public class ExtendedReadPermissionEnabler {
         if (System.getProperty("hudson.security.ExtendedReadPermission") == null) {
             Item.EXTENDED_READ.setEnabled(true);
             Computer.EXTENDED_READ.setEnabled(true);
+            View.EXTENDED_READ.setEnabled(true);
         }
     }
 }
