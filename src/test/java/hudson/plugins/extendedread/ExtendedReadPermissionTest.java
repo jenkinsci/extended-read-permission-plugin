@@ -9,6 +9,7 @@ package hudson.plugins.extendedread;
 
 import hudson.model.Computer;
 import hudson.model.Item;
+import hudson.model.View;
 import org.junit.jupiter.api.Test;
 import org.jvnet.hudson.test.JenkinsRule;
 import org.jvnet.hudson.test.junit.jupiter.WithJenkins;
@@ -31,5 +32,10 @@ class ExtendedReadPermissionTest {
     @Test
     void testComputerExtendedReadPermissionEnabled(JenkinsRule j) {
         assertTrue(Computer.EXTENDED_READ.getEnabled());
+    }
+
+    @Test
+    void testViewExtendedReadPermissionEnabled(JenkinsRule j) {
+        assertTrue(View.EXTENDED_READ.getEnabled());
     }
 }
